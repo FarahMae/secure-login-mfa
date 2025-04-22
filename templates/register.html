@@ -1,0 +1,22 @@
+<h2>Register</h2>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div style="color: {% if category == 'danger' %}red{% else %}blue{% endif %};">
+        {{ message }}
+      </div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+<form method="post">
+  Username: <input type="text" name="username"><br>
+  Password: <input type="password" name="password"><br>
+  <input type="submit" value="Register">
+</form>
+
+{% if qr_image %}
+  <h3>Scan This QR Code</h3>
+  <img src="{{ url_for('static', filename=qr_image.split('/')[-1]) }}" alt="QR Code">
+{% endif%}

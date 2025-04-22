@@ -1,0 +1,17 @@
+<h2>Login</h2>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div style="color: red;">{{ message }}</div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+<form method="post">
+  Username: <input type="text" name="username"><br>
+  Password: <input type="password" name="password"><br>
+  <input type="submit" value="Login">
+</form>
+
+<a href="/">Back to Home</a>

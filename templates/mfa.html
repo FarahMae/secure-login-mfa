@@ -1,0 +1,17 @@
+<h2>Multi-Factor Authentication</h2>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div style="color: red;">{{ message }}</div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+<form method="post">
+  Enter 6-digit code from your Google Authenticator app:<br>
+  <input type="text" name="token"><br>
+  <input type="submit" value="Verify">
+</form>
+
+<a href="/">Back to Home</a>
