@@ -1,4 +1,4 @@
-# 🔐 Secure Login with MFA using Flask
+# 🔐 Secure Login with MFA (Multi-Factor Authentication)  using Flask
 ![MFA Badge](https://img.shields.io/badge/Secure-MFA-green?style=flat-square&logo=python)
 ![Status](https://img.shields.io/badge/status-working-blue?style=flat-square)
 
